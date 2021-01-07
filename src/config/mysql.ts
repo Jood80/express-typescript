@@ -3,12 +3,12 @@ import config from './config';
 
 const params = {
     user: config.mysql.user,
-    password: config.mysql.database,
+    password: config.mysql.password,
     host: config.mysql.host,
     database: config.mysql.database
 };
 
-const Connect = async () =>
+const connect = async () =>
     new Promise<mysql.Connection>((resolve, reject) => {
         const connection = mysql.createConnection(params);
         connection.connect((err) => {
@@ -31,4 +31,4 @@ const Query = async (connection: mysql.Connection, query: string) =>
         });
     });
 
-export { Connect, Query };
+export { connect, Query };
