@@ -1,4 +1,5 @@
-import { getAllBooks } from './books';
+import { getAllBooks } from './getBooks';
+import { postBook } from './postBooks';
 import { sampleHeathCheck } from './sample';
 
-export { getAllBooks, sampleHeathCheck };
+export { getAllBooks, postBook, sampleHeathCheck };
