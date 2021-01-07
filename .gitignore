@@ -1,1 +1,12 @@
-node_modules
+node_modules/**/*
+build/**/*
+certs/**/*
+
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+package-lock.json
