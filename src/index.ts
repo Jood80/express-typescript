@@ -3,6 +3,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import logging from './config/logging';
 import config from './config/config';
+import SampleRoute from './router/sample';
 
 // namespace to determine where our logs are coming from
 const NAMESPACE = 'Server';
@@ -19,7 +20,6 @@ router.use((req, res, next) => {
     next();
 });
 
-
 /** Parse the request */
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
@@ -35,6 +35,8 @@ router.use((req, res, next) => {
     next();
 });
 
+/** Routes */
+router.use('/', SampleRoute);
 
 /** Error Handling */
 router.use((req, res, next) => {
@@ -43,9 +45,9 @@ router.use((req, res, next) => {
     return res.status(404).json({
         message: error.message
     });
+
+    next();
 });
-
-
 
 /** Create the Server */
 const httpServer = http.createServer(router);
