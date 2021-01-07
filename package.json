@@ -4,7 +4,8 @@
   "description": "this project is a trail for using typescript with node.js and Express.js",
   "main": "src/index.js",
   "scripts": {
-    "build": "rm -rf build/ && prettier --write src/ && tsc"
+    "build": "rm -rf build/ && prettier --write src/ && tsc",
+    "dev": "nodemon src/index.ts"
   },
   "author": "Nujood",
   "license": "ISC",
