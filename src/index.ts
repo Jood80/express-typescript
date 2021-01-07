@@ -3,7 +3,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import logging from './config/logging';
 import config from './config/config';
-import SampleRoute from './router/sample';
+import SampleRoute from './router';
 
 // namespace to determine where our logs are coming from
 const NAMESPACE = 'Server';
