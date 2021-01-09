@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 
-import logging from '../config/logging';
-import { connect, Query } from '../config/mysql';
+import logging from '../utils/logging';
+import { connect, Query } from '../database/config/mysql';
 
 const NAMESPACE = 'Books';
 
