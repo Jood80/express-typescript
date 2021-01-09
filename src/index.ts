@@ -1,8 +1,8 @@
 import http from 'http';
 import express from 'express';
 import bodyParser from 'body-parser';
-import logging from './config/logging';
-import config from './config/config';
+import logging from './utils/logging';
+import config from './database/config/config';
 import SampleRoute from './router';
 
 // namespace to determine where our logs are coming from
