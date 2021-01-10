@@ -1,0 +1,1 @@
+INSERT INTO bookshop SET ('Dynamic Control', 'Nerd', NOW());
